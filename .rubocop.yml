@@ -1,0 +1,62 @@
+inherit_from: ~/.rubocop.yml
+
+AllCops:
+  TargetRubyVersion: 2.5
+  TargetRailsVersion: 5.2.1
+  Exclude:
+    - db/schema.rb
+    - node_modules/**/*
+    - app/**/*.html.slim
+
+Rails:
+  Enabled: true
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/BlockNesting:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/LineLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Metrics/ParameterLists:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/MixinUsage:
+  Exclude:
+    - bin/update
+    - bin/setup
+
+Style/BlockComments:
+  Exclude:
+    - config/routes.rb
+
+Style/StringLiterals:
+  Enabled: false
+  # TODO: consider enabling this
+  # EnforcedStyle: double_quotes
