@@ -51,11 +51,15 @@ module MercurySso
   private
 
   def login_complete_url
-    Rails.application.routes.url_helpers.login_complete_url(host: request.host)
+    Rails.application.routes.url_helpers.login_complete_url(host: hostname)
   end
 
   def root_url
-    Rails.application.routes.url_helpers.root_url(host: request.host)
+    Rails.application.routes.url_helpers.root_url(host: hostname)
+  end
+
+  def hostname
+    request.host_with_port
   end
 end
 
