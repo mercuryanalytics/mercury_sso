@@ -31,7 +31,6 @@ module MercurySso
 
     def redirect_to_authentication_intercept
       auth_intercept = session[:authentication_intercept]
-      session[:authentication_intercept] = nil
       redirect_to auth_intercept if auth_intercept
     end
   end
